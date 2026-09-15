@@ -1,0 +1,20 @@
+{
+  "name": "lenny_growth_assistant",
+  "version": "1.0.0",
+  "description": "A full-stack implementation for the Forward Deployed Engineer take-home assignment: a session-aware, transcript-grounded assistant for product and growth questions, with a Ship 30 for 30 essay skill and a sandboxed artifact viewer.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs",
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
