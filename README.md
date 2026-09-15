@@ -16,6 +16,25 @@ Ship 30 for 30 essay skill and a sandboxed artifact viewer.
 
 ## Quick start
 
+### Pre requisites
+1) Creating and activating a virtual environment for this project is recommended 
+In terminal:
+```bash
+python -m venv .lenny
+.lenny/scripts/activate
+```
+
+2) Have docker downloaded at 1st when you open it might say wsl is unsupported just open powershell and type
+wsl --install
+3) Have Node.js downloaded
+4) Also download ollama 
+Then in powershell:
+```bash
+ollama pull qwen2.5:7b
+#to test
+ollama run qwen2.5:7b
+```
+
 ### 1. Start infrastructure
 ```bash
 docker compose up -d db
@@ -24,22 +43,12 @@ docker compose up -d db
 ### 2. Backend
 ```bash
 cd backend
-python -m venv .venv
-# Windows:
-.venv\Scripts\activate
-# macOS/Linux:
-# source .venv/bin/activate
 pip install -r requirements.txt
 uvicorn app.main:app --reload
 ```
+In another terminal
 
-### 3. Ollama
-Install Ollama, then:
-```bash
-ollama pull qwen2.5:7b
-```
-
-### 4. Frontend
+### 3. Frontend
 ```bash
 cd frontend
 npm install
@@ -121,6 +130,8 @@ chips (guest + source file) under every grounded answer. Design rationale lives 
 - `docker-compose.yml` currently only runs Postgres — backend/frontend/Ollama one-command
   startup is not yet wired.
 - No structured request tracing beyond basic access logs.
+- Only 15 of 300+ available episodes are ingested (by design, for a fast demo — see
+  `docs/PRD.md` for the scope rationale).
 - Agent layer is a custom Python function, not the Pi Coding Agent harness referenced in
   the brief (Pi is TypeScript-native); documented as an assumption in `docs/PRD.md`.
 
