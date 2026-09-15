@@ -121,8 +121,6 @@ chips (guest + source file) under every grounded answer. Design rationale lives 
 - `docker-compose.yml` currently only runs Postgres — backend/frontend/Ollama one-command
   startup is not yet wired.
 - No structured request tracing beyond basic access logs.
-- Only 15 of 300+ available episodes are ingested (by design, for a fast demo — see
-  `docs/PRD.md` for the scope rationale).
 - Agent layer is a custom Python function, not the Pi Coding Agent harness referenced in
   the brief (Pi is TypeScript-native); documented as an assumption in `docs/PRD.md`.
 
