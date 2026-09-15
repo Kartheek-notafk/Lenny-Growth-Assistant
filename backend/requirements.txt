@@ -7,4 +7,6 @@ psycopg[binary]
 httpx
 openai
 python-dotenv
+pyyaml
 pytest
+pytest-asyncio
