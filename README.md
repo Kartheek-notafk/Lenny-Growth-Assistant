@@ -34,7 +34,7 @@ ollama pull qwen2.5:7b
 #to test
 ollama run qwen2.5:7b
 ```
-
+5) Put all the raw data in data/transcripts folder
 ### 1. Start infrastructure
 ```bash
 docker compose up -d db
